@@ -3,19 +3,18 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="description" content="Portfolio of Mohib Ullah Foysal, Flutter developer and Computer Science &amp; Technology diploma student at Feni Polytechnic Institute, available for Flutter internships from November 2026."/>
+<meta name="description" content="Portfolio of Mohib Ullah Foysal, a Flutter developer focused on cross-platform mobile applications, backend integration with Firebase and REST APIs, and structured software engineering."/>
 <meta name="author" content="Mohib Ullah Foysal"/>
 <meta name="robots" content="index,follow"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="Mohib Ullah Foysal | Flutter Developer"/>
-<meta property="og:description" content="Flutter developer building Firebase-backed and API-driven mobile apps with Dart. Available for Flutter internships from November 2026."/>
-<!-- TODO: replace YOUR-DOMAIN with your real site address and add an og.png (1200x630) in /images -->
+<meta property="og:description" content="Flutter developer building cross-platform mobile apps in Dart with Firebase and REST APIs, structured with Clean Architecture and Bloc/Cubit."/>
 <meta property="og:image" content="https://YOUR-DOMAIN/images/og.png"/>
 <meta property="og:url" content="https://YOUR-DOMAIN/"/>
 <link rel="canonical" href="https://YOUR-DOMAIN/"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Mohib Ullah Foysal | Flutter Developer"/>
-<meta name="twitter:description" content="Flutter developer building Firebase-backed and API-driven mobile apps with Dart. Available for Flutter internships from November 2026."/>
+<meta name="twitter:description" content="Flutter developer building cross-platform mobile apps in Dart with Firebase and REST APIs, structured with Clean Architecture and Bloc/Cubit."/>
 <meta name="theme-color" content="#060606"/>
 <title>Mohib Ullah Foysal | Flutter Developer</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23060606'/%3E%3Ctext x='16' y='23' font-size='18' text-anchor='middle' fill='%23b8ff57' font-family='Impact,sans-serif'%3EMF%3C/text%3E%3C/svg%3E"/>
@@ -217,7 +216,7 @@ body.ready .hero-photo{transform:none}
 @keyframes marq{to{transform:translateX(-50%)}}
 
 #about-me{background:var(--gray);position:relative;overflow:hidden;overflow:clip}
-.about-bg{position:absolute;right:-3%;top:4%;font-family:var(--display);font-size:clamp(220px,36vw,560px);line-height:.8;color:transparent;-webkit-text-stroke:1px rgba(var(--fg),.045);pointer-events:none;user-select:none}
+.about-bg{position:absolute;right:6%;top:4%;font-family:var(--display);font-size:clamp(220px,36vw,560px);line-height:.8;color:transparent;-webkit-text-stroke:1px rgba(var(--fg),.3);pointer-events:none;user-select:none}
 .about-heading{position:relative;font-family:var(--display);font-weight:400;font-size:clamp(56px,10vw,130px);line-height:.95;text-transform:uppercase;margin-bottom:72px}
 .about-heading>span{display:block;overflow:hidden;padding-bottom:.04em}
 .about-heading .accent{color:var(--accent)}
@@ -577,6 +576,39 @@ body.has-cursor .proj-more-btn{cursor:none}
 #lb-count{position:absolute;left:0;right:0;bottom:20px;text-align:center;font:400 11px var(--mono);letter-spacing:4px;color:var(--gray3)}
 #lightbox.single #lb-prev,#lightbox.single #lb-next,#lightbox.single #lb-count{display:none}
 body.has-cursor #lb-prev,body.has-cursor #lb-next,body.has-cursor #lb-close{cursor:none}
+.nav-links a:not(.btn).active{color:var(--accent)}
+#nav-overlay a.active{color:var(--accent)}
+.xp{position:relative;isolation:isolate;overflow:hidden;display:grid;grid-template-columns:minmax(140px,230px) minmax(0,1fr);gap:clamp(24px,5vw,72px);padding:clamp(40px,6vw,72px) 0;border-top:1px solid rgba(var(--ln),.14);border-bottom:1px solid rgba(var(--ln),.14)}
+.xp-head{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:12px clamp(24px,5vw,72px)}
+.xp-mark{font-family:var(--stencil);font-size:clamp(72px,12vw,170px);line-height:.85;letter-spacing:.04em;color:transparent;-webkit-text-stroke:1px rgba(var(--fg),.3);pointer-events:none;user-select:none}
+.xp-when{position:relative;padding-left:30px;font-size:11px;letter-spacing:3px;text-transform:uppercase;line-height:2;color:rgba(var(--fg),.7)}
+.xp-when b{display:block;font-weight:400;color:var(--accent)}
+.xp-when::before{content:'';position:absolute;left:0;top:9px;width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px rgba(var(--ac),.12),0 0 16px rgba(var(--ac),.6);animation:pulse 2s ease infinite}
+.xp-when::after{content:'';position:absolute;left:4px;top:34px;bottom:-72px;width:1px;background:linear-gradient(rgba(var(--ac),.5),transparent)}
+.xp-role{font-family:var(--display);font-weight:400;font-size:clamp(56px,9vw,128px);line-height:.95;text-transform:uppercase;color:var(--accent)}
+.xp-org{display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin-top:22px;font-family:var(--body);font-weight:600;font-size:clamp(18px,2vw,24px);letter-spacing:-.01em;color:rgba(var(--fg),.95)}
+.xp-tag{font:400 10px var(--mono);letter-spacing:3px;color:var(--accent);border:1px solid rgba(var(--ac),.35);border-radius:999px;padding:5px 12px}
+.xp-desc{max-width:600px;margin-top:20px;font-family:var(--body);font-size:16px;line-height:1.85;color:rgba(var(--fg),.84)}
+.xp-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:48px;padding-top:26px;border-top:1px solid rgba(var(--ln),.12)}
+.xp-facts dt{margin-bottom:8px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--accent)}
+.xp-facts dd{font-family:var(--body);font-weight:500;font-size:15px;line-height:1.5;color:var(--white)}
+@media(max-width:900px){.xp-facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.xp{grid-template-columns:1fr;gap:20px}.xp-when::after{display:none}}
+.hero-headline .hero-line:nth-child(1)>span{color:transparent;background:linear-gradient(180deg,#ffffff 15%,#d9d3c4 100%);-webkit-background-clip:text;background-clip:text}
+.hero-line .line-stroke{-webkit-text-stroke:1px rgba(var(--fg),.7)}
+.hero-line .line-accent{background-size:240% 100%;animation:sheen 7s linear infinite}
+@keyframes sheen{to{background-position:-240% 0}}
+.hero-desc{color:rgba(var(--fg),.86)}
+.hero-desc mark{background:none;color:var(--accent);font-weight:600}
+.hero-actions .btn-ghost{color:rgba(var(--fg),.92);border-bottom-color:rgba(var(--fg),.45)}
+.hero-actions .btn-ghost:hover{color:var(--accent);border-color:var(--accent)}
+.chip-loc{color:rgba(var(--fg),.78)}
+#hero{background:var(--black)}
+.photo-border{display:block}
+.photo-scan{display:block}
+.photo-scan::before{display:none}
+.hero-right{animation:heroFloat 7s ease-in-out infinite}
+@keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 </style>
 </head>
 <body>
@@ -598,6 +630,7 @@ body.has-cursor #lb-prev,body.has-cursor #lb-next,body.has-cursor #lb-close{curs
   <div class="nav-links">
     <a href="#skills">Skills</a>
     <a href="#works">Projects</a>
+    <a href="#experience">Experience</a>
     <a href="#about-me">About</a>
     <a href="#contact">Contact</a>
     <button type="button" class="btn" data-open-form>Get in touch →</button>
@@ -609,6 +642,7 @@ body.has-cursor #lb-prev,body.has-cursor #lb-next,body.has-cursor #lb-close{curs
   <button type="button" id="nav-close" aria-label="Close menu">Close ✕</button>
   <a href="#skills">Skills</a>
   <a href="#works">Projects</a>
+  <a href="#experience">Experience</a>
   <a href="#about-me">About</a>
   <a href="#contact">Contact</a>
 </div>
@@ -616,13 +650,13 @@ body.has-cursor #lb-prev,body.has-cursor #lb-next,body.has-cursor #lb-close{curs
 <header id="hero">
   <canvas id="hero-canvas" aria-hidden="true"></canvas>
   <div class="hero-left">
-    <p class="hero-eyebrow">Diploma in CST · Flutter Intern Candidate</p>
+    <p class="hero-eyebrow">Computer Science &amp; Technology · Flutter Developer</p>
     <h1 class="hero-headline">
       <span class="hero-line"><span>Flutter</span></span>
       <span class="hero-line"><span class="line-stroke">Developer</span></span>
-      <span class="hero-line"><span class="line-accent">Internship from Nov 2026</span></span>
+      <span class="hero-line"><span class="line-accent">Building maintainable software</span></span>
     </h1>
-    <p class="hero-desc">Flutter developer finishing a Diploma in Computer Science &amp; Technology (graduating December 2026). I build Firebase-backed and API-driven mobile apps in Dart, and I am available for Flutter internships from November 2026.</p>
+    <p class="hero-desc">I build cross-platform mobile applications with <mark>Flutter and Dart</mark>, with close attention to architecture, state management and backend integration through Firebase and REST APIs. My direction is <mark>software engineering</mark>.</p>
     <div class="hero-actions">
       <a href="#works" class="btn">View Projects →</a>
       <a href="#contact" class="btn-ghost">Contact ↗</a>
@@ -640,7 +674,7 @@ body.has-cursor #lb-prev,body.has-cursor #lb-next,body.has-cursor #lb-close{curs
       <div class="photo-fade top"></div>
       <div class="photo-fade bottom"></div>
       <div class="photo-scan"></div>
-      <div class="photo-chip chip-status"><span class="chip-dot"></span>Available Nov 2026</div>
+      <div class="photo-chip chip-status"><span class="chip-dot"></span>Open to opportunities</div>
       <div class="photo-chip chip-loc"><b>Bangladesh 🇧🇩</b>Dhaka time: <time id="live-clock">--:--:--</time></div>
       <div class="photo-name">Mohib Ullah Foysal</div>
     </div>
@@ -660,60 +694,45 @@ body.has-cursor #lb-prev,body.has-cursor #lb-next,body.has-cursor #lb-close{curs
   <div class="skills-header reveal">
     <div>
       <p class="section-label">Current Stack</p>
-      <h2 class="section-title">Skills &amp;<br>Tools</h2>
+      <h2 class="section-title">Skills &amp;<br><span class="line-accent">Tools</span></h2>
     </div>
-    <p class="skills-lede">Grouped by how I use them, from my primary Flutter stack to the tools I work with alongside it.</p>
+    <p class="skills-lede">These skills come from building applications and refining them project by project, ordered by how deeply I use each one.</p>
   </div>
   <div class="bento">
     <article class="sk sk-feature reveal">
       <svg class="sk-ring" viewBox="0 0 240 240" fill="none" aria-hidden="true"><circle cx="120" cy="120" r="110" stroke="rgba(184,255,87,.5)" stroke-dasharray="3 9"/><circle cx="120" cy="120" r="78" stroke="rgba(184,255,87,.3)" stroke-dasharray="1 7"/><circle cx="120" cy="10" r="4" fill="#b8ff57"/></svg>
-      <div class="sk-top"><h3>App Development</h3><span class="sk-tag">Primary</span></div>
+      <div class="sk-top"><h3>Primary Development</h3><span class="sk-tag">Primary</span></div>
       <div class="sk-word" aria-hidden="true">Flutter<b>&amp; Dart</b></div>
-      <ul><li>Flutter</li><li>Responsive UI</li><li>Material Design</li><li>Bloc / Cubit</li><li>Navigation</li><li>Reusable Widgets</li></ul>
+      <ul><li>Flutter</li><li>Dart</li><li>Responsive UI</li><li>Material Design</li><li>Reusable Widgets</li><li>Navigation</li><li>OOP</li><li>Async Programming</li><li>Streams</li><li>Generics</li><li>Exception Handling</li></ul>
       <span class="sk-idx" aria-hidden="true">01</span>
     </article>
     <article class="sk sk-c3 reveal">
-      <div class="sk-top"><h3>Programming</h3><span class="sk-tag">Primary</span></div>
-      <ul><li>Dart</li><li>OOP</li><li>Async Programming</li><li>Streams</li><li>Generics</li><li>Exception Handling</li></ul>
+      <div class="sk-top"><h3>Backend &amp; Integration</h3><span class="sk-tag soft">Project experience</span></div>
+      <ul><li>Firebase Authentication</li><li>Cloud Firestore</li><li>REST APIs</li><li>Open-Meteo API</li></ul>
       <span class="sk-idx" aria-hidden="true">02</span>
     </article>
     <article class="sk sk-c3 reveal">
-      <div class="sk-top"><h3>Backend &amp; API</h3><span class="sk-tag soft">Project experience</span></div>
-      <ul><li>Firebase Authentication</li><li>Cloud Firestore</li><li>REST APIs</li><li>Open-Meteo API</li></ul>
+      <div class="sk-top"><h3>Engineering Practices</h3><span class="sk-tag soft">Applied</span></div>
+      <ul><li>Clean Architecture</li><li>Repository Pattern</li><li>Feature-based Structure</li><li>Bloc / Cubit</li></ul>
       <span class="sk-idx" aria-hidden="true">03</span>
     </article>
-    <article class="sk sk-c2 reveal">
-      <div class="sk-top"><h3>Architecture</h3><span class="sk-tag soft">Learning</span></div>
-      <ul><li>Clean Architecture</li><li>Repository Pattern</li><li>Feature-based Structure</li></ul>
-      <span class="sk-idx" aria-hidden="true">04</span>
-    </article>
-    <article class="sk sk-c2 reveal">
-      <div class="sk-top"><h3>Database &amp; Web</h3><span class="sk-tag soft">Working knowledge</span></div>
-      <ul><li>MySQL</li><li>SQL</li><li>PHP</li><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
-      <span class="sk-idx" aria-hidden="true">05</span>
-    </article>
-    <article class="sk sk-c2 reveal">
-      <div class="sk-top"><h3>Tools</h3><span class="sk-tag soft">Daily use</span></div>
-      <ul><li>Git</li><li>GitHub</li><li>VS Code</li><li>Android Studio</li></ul>
-      <span class="sk-idx" aria-hidden="true">06</span>
-    </article>
     <article class="sk sk-c6 reveal">
-      <div class="sk-top"><h3>Design</h3><span class="sk-tag soft">Familiar with</span></div>
-      <ul><li>UI Design</li><li>UX Fundamentals</li><li>Responsive Interface</li><li>Component-based UI</li></ul>
-      <span class="sk-idx" aria-hidden="true">07</span>
+      <div class="sk-top"><h3>Additional Technologies</h3><span class="sk-tag soft">Working knowledge</span></div>
+      <ul><li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>MySQL</li><li>SQL</li><li>Git</li><li>GitHub</li><li>VS Code</li><li>Android Studio</li><li>UI Design</li><li>UX Fundamentals</li></ul>
+      <span class="sk-idx" aria-hidden="true">04</span>
     </article>
   </div>
   <div class="flow reveal">
     <span class="flow-label">How I structure apps</span>
     <ol><li>UI / Widgets</li><li>Domain</li><li>Repository</li><li>Data · Firebase / REST</li></ol>
   </div>
-  <p class="skill-note reveal">Flutter and Dart are my primary stack. Architecture is the area I am actively deepening.</p>
+  <p class="skill-note reveal">Flutter and Dart are my primary stack. Architecture and state management are the engineering practices I keep refining.</p>
 </section>
 
 <section id="works">
   <div class="works-top reveal">
     <p class="section-label">Projects</p>
-    <h2 class="section-title">Selected<br>Projects</h2>
+    <h2 class="section-title">Selected<br><span class="line-accent">Projects</span></h2>
   </div>
   <p class="section-label list-label">Featured</p>
   <ol class="project-list" id="project-list"></ol>
@@ -722,11 +741,35 @@ body.has-cursor #lb-prev,body.has-cursor #lb-next,body.has-cursor #lb-close{curs
   <noscript><p class="skill-note">Enable JavaScript to see the project list, or visit <a href="https://github.com/MUfoysal" target="_blank" rel="noopener noreferrer">github.com/MUfoysal</a>.</p></noscript>
 </section>
 
+<section id="experience">
+  <div class="works-top xp-head reveal">
+    <div>
+      <p class="section-label">Experience</p>
+      <h2 class="section-title">Where I<br><span class="line-accent">Work</span></h2>
+    </div>
+    <span class="xp-mark" aria-hidden="true">UTC</span>
+  </div>
+  <article class="xp reveal">
+    <div class="xp-when"><b>Present</b>Feni, Bangladesh</div>
+    <div class="xp-body">
+      <h3 class="xp-role">Intern</h3>
+      <p class="xp-org">Universal Trade Center<span class="xp-tag">UTC</span></p>
+      <p class="xp-desc">Working as an intern at Universal Trade Center, a technology education organization in Feni, and learning through hands-on work there.</p>
+      <dl class="xp-facts">
+        <div><dt>Status</dt><dd>Current</dd></div>
+        <div><dt>Organization</dt><dd>Universal Trade Center</dd></div>
+        <div><dt>Sector</dt><dd>Technology education</dd></div>
+        <div><dt>Location</dt><dd>Feni, Bangladesh</dd></div>
+      </dl>
+    </div>
+  </article>
+</section>
+
 <section id="about-me">
   <div class="about-bg" aria-hidden="true">MF</div>
   <h2 class="about-heading reveal" aria-label="Meet Mohib Foysal"><span data-split>Meet</span><span data-split>Mohib</span><span class="accent" data-split>Foysal</span></h2>
   <div class="ab-lead reveal">
-    <p>I'm a <mark>Flutter developer</mark> completing a <mark>Diploma in Computer Science &amp; Technology</mark> at Feni Polytechnic Institute, and I'm looking for a <mark>Flutter internship</mark>.</p>
+    <p>I'm a <mark>Flutter developer</mark> with a <mark>Computer Science &amp; Technology</mark> background, building toward <mark>software engineering</mark>.</p>
   </div>
   <div class="ab-grid reveal">
     <figure class="ab-cell ab-photo-cell">
@@ -738,8 +781,8 @@ body.has-cursor #lb-prev,body.has-cursor #lb-next,body.has-cursor #lb-close{curs
     </figure>
     <div class="ab-cell ab-intro">
       <h3 class="ab-h">Introduction</h3>
-      <p>I am a final-year Diploma in Engineering student (Computer Science &amp; Technology) at Feni Polytechnic Institute, Bangladesh, graduating in December 2026. My focus is cross-platform mobile development with Flutter and Dart.</p>
-      <p>I have built Flutter apps that use Firebase Authentication and Cloud Firestore, consume REST APIs, and manage state with Bloc/Cubit. I am currently deepening my understanding of Clean Architecture: separating UI, domain and data layers so that code stays testable and maintainable. I also have working knowledge of HTML, CSS, JavaScript, PHP and MySQL.</p>
+      <p>I focus on cross-platform mobile development with Flutter and Dart. My approach goes beyond building interfaces: I care about application structure, data flow, state management and maintainability. My Computer Science &amp; Technology training at Feni Polytechnic Institute provides the foundation.</p>
+      <p>I have built Flutter applications that integrate Firebase Authentication and Cloud Firestore, consume REST APIs, and manage state with Bloc/Cubit, and I have applied Clean Architecture, the repository pattern and feature-based structure to keep UI, domain and data layers separate. Alongside Flutter, I work with HTML, CSS, JavaScript, PHP and MySQL.</p>
     </div>
     <div class="ab-cell ab-edu-cell">
       <h3 class="ab-h">Education</h3>
@@ -751,12 +794,12 @@ body.has-cursor #lb-prev,body.has-cursor #lb-next,body.has-cursor #lb-close{curs
       </dl>
     </div>
     <div class="ab-cell ab-learn">
-      <h3 class="ab-h">Currently Learning</h3>
-      <ul class="ab-list"><li>Clean Architecture</li><li>Bloc / Cubit</li><li>REST API integration</li><li>Firebase</li></ul>
+      <h3 class="ab-h">Engineering Focus</h3>
+      <ul class="ab-list"><li>Application Architecture</li><li>Maintainable Code</li><li>State Management</li><li>Backend Integration</li><li>Software Design</li></ul>
     </div>
     <div class="ab-cell ab-goal-cell">
-      <h3 class="ab-h">Looking For</h3>
-      <p class="ab-goal">A Flutter internship from November 2026, with the aim of growing into a junior Flutter developer role.</p>
+      <h3 class="ab-h">Engineering Direction</h3>
+      <p class="ab-goal">My focus is on becoming a well-rounded Software Engineer: building strong foundations in Flutter development while expanding into backend systems, software design and application architecture.</p>
     </div>
     <div class="ab-cell ab-code">
       <article class="code" aria-label="Developer summary in Dart code">
@@ -764,11 +807,11 @@ body.has-cursor #lb-prev,body.has-cursor #lb-next,body.has-cursor #lb-close{curs
         <pre><code><span class="ln"><span class="k">class</span> <span class="t">Developer</span> {</span>
 <span class="ln">  <span class="k">final</span> name = <span class="s">'Mohib Ullah Foysal'</span>;</span>
 <span class="ln">  <span class="k">final</span> education = <span class="s">'Diploma in Engineering (CST)'</span>;</span>
-<span class="ln">  <span class="k">final</span> focus = [<span class="s">'Flutter'</span>, <span class="s">'Dart'</span>];</span>
-<span class="ln">  <span class="k">final</span> stack = [<span class="s">'Firebase'</span>, <span class="s">'Cloud Firestore'</span>,</span>
-<span class="ln">    <span class="s">'Bloc/Cubit'</span>, <span class="s">'REST APIs'</span>, <span class="s">'Git &amp; GitHub'</span>];</span>
-<span class="ln">  <span class="t">String</span> goal = <span class="s">'Flutter internship, then junior developer'</span>;</span>
-<span class="ln">  <span class="k">void</span> build() =&gt; print(<span class="s">'Building one project at a time.'</span>);<span class="caret"></span></span>
+<span class="ln">  <span class="k">final</span> role = <span class="s">'Flutter Developer'</span>;</span>
+<span class="ln">  <span class="k">final</span> direction = <span class="s">'Software Engineer'</span>;</span>
+<span class="ln">  <span class="k">final</span> stack = [<span class="s">'Flutter'</span>, <span class="s">'Dart'</span>, <span class="s">'Firebase'</span>, <span class="s">'REST APIs'</span>,</span>
+<span class="ln">    <span class="s">'Clean Architecture'</span>, <span class="s">'Bloc/Cubit'</span>, <span class="s">'Git &amp; GitHub'</span>];</span>
+<span class="ln">  <span class="k">void</span> build() =&gt; print(<span class="s">'Building maintainable software.'</span>);<span class="caret"></span></span>
 <span class="ln">}</span></code></pre>
       </article>
     </div>
@@ -776,11 +819,12 @@ body.has-cursor #lb-prev,body.has-cursor #lb-next,body.has-cursor #lb-close{curs
   <div class="journey-wrap">
     <div class="journey-head reveal"><h3>My Journey</h3><code>$ git log <b>--journey</b></code></div>
     <ol class="jy-list reveal">
-      <li class="jy-row"><h4>Fundamentals</h4><div><span class="jy-tag"><em>init:</em> programming fundamentals</span><p>Started with programming logic and problem solving during my diploma studies.</p></div></li>
-      <li class="jy-row"><h4>Dart &amp; OOP</h4><div><span class="jy-tag"><em>feat:</em> dart &amp; oop</span><p>Learned Dart: classes, generics, streams and asynchronous programming.</p></div></li>
-      <li class="jy-row"><h4>Flutter Apps</h4><div><span class="jy-tag"><em>feat:</em> flutter app development</span><p>Started building Flutter projects, including Quiz App and StudyFlow.</p></div></li>
-      <li class="jy-row"><h4>Firebase &amp; APIs</h4><div><span class="jy-tag"><em>feat:</em> firebase &amp; rest apis</span><p>Used Firebase in Real Chat, Expense Tracker and Konoha Notes (Authentication and Cloud Firestore in the latter two), and integrated the Open-Meteo API in Weather App.</p></div></li>
-      <li class="jy-row is-head"><h4>Real Projects</h4><div><span class="jy-tag"><em>wip:</em> clean architecture &amp; state management</span><p>Applying Clean Architecture and Bloc/Cubit across my projects, and seeking a Flutter internship from November 2026.</p><span class="head-badge">HEAD → now</span></div></li>
+      <li class="jy-row"><h4>Fundamentals</h4><div><span class="jy-tag"><em>init:</em> programming fundamentals</span><p>Built a foundation in programming logic, problem solving and core computer science concepts through my diploma coursework.</p></div></li>
+      <li class="jy-row"><h4>Dart &amp; OOP</h4><div><span class="jy-tag"><em>feat:</em> dart &amp; oop</span><p>Worked through Dart's object model: classes, generics, streams and asynchronous programming.</p></div></li>
+      <li class="jy-row"><h4>Flutter Development</h4><div><span class="jy-tag"><em>feat:</em> flutter app development</span><p>Moved into practical Flutter application development, starting with Quiz App and StudyFlow.</p></div></li>
+      <li class="jy-row"><h4>Backend Integration</h4><div><span class="jy-tag"><em>feat:</em> firebase &amp; rest apis</span><p>Added Firebase to Real Chat, Expense Tracker and Konoha Notes (Authentication and Cloud Firestore in the latter two) and integrated the Open-Meteo REST API in Weather App.</p></div></li>
+      <li class="jy-row"><h4>Software Architecture</h4><div><span class="jy-tag"><em>feat:</em> clean architecture &amp; state management</span><p>Applied feature-based Clean Architecture in Expense Tracker, with the repository pattern isolating data access, and Clean Architecture in Weather App. Used Cubit-based state management in LYRA.</p></div></li>
+      <li class="jy-row is-head"><h4>Engineering Growth</h4><div><span class="jy-tag"><em>wip:</em> maintainability &amp; design</span><p>Continuing to refine application structure, separation of concerns and software design through practical projects.</p><span class="head-badge">HEAD → now</span></div></li>
     </ol>
   </div>
 </section>
@@ -792,9 +836,9 @@ body.has-cursor #lb-prev,body.has-cursor #lb-next,body.has-cursor #lb-close{curs
   </div>
   <p class="section-label reveal">Get In Touch</p>
   <h2 class="contact-heading reveal" aria-label="Let's Connect"><span data-split>Let's</span><span class="accent" data-split>Connect</span></h2>
-  <p class="contact-sub reveal">Open to Flutter internship and junior developer opportunities</p>
+  <p class="contact-sub reveal">Open to meaningful technical collaboration and professional opportunities.</p>
   <div class="contact-grid">
-    <div class="globe-wrap reveal"><canvas id="globe" aria-hidden="true"></canvas><p class="globe-cap">Bangladesh 🇧🇩 · available from November 2026</p></div>
+    <div class="globe-wrap reveal"><canvas id="globe" aria-hidden="true"></canvas><p class="globe-cap">Bangladesh 🇧🇩 · open to collaboration</p></div>
     <div class="reveal">
       <ul class="link-list">
         <li><a class="link-row" href="https://github.com/MUfoysal" target="_blank" rel="noopener noreferrer"><span class="lr-n" aria-hidden="true">01</span><span class="lr-t">GitHub<small>github.com/MUfoysal</small></span><span class="lr-a" aria-hidden="true">↗</span></a></li>
@@ -842,7 +886,7 @@ body.has-cursor #lb-prev,body.has-cursor #lb-next,body.has-cursor #lb-close{curs
           <h2>What brings you here?</h2>
           <p class="mf-sub">Hiring, a project or a collaboration? Five short questions and it lands straight in my inbox.</p>
           <fieldset class="mf-chips" aria-label="What brings you here">
-            <label class="mf-chip"><input type="radio" name="topic" value="Job / Internship offer"/><span>Job / Internship</span></label>
+            <label class="mf-chip"><input type="radio" name="topic" value="Job / Internship offer"/><span>Job opportunity</span></label>
             <label class="mf-chip"><input type="radio" name="topic" value="Project work"/><span>Project work</span></label>
             <label class="mf-chip"><input type="radio" name="topic" value="Freelance task"/><span>Freelance task</span></label>
             <label class="mf-chip"><input type="radio" name="topic" value="Collaboration"/><span>Collaboration</span></label>
@@ -1495,6 +1539,31 @@ safe(function(){
 });
 
 safe(function(){$('#current-year').textContent=new Date().getFullYear()});
+
+safe(function(){
+  const links=$$('.nav-links a[href^="#"]:not(.btn),#nav-overlay a[href^="#"]');
+  const secs=['skills','works','experience','about-me','contact'].map(id=>document.getElementById(id));
+  let cur=null,lock=0;
+  const set=id=>links.forEach(a=>{
+    const on=a.getAttribute('href')==='#'+id;
+    a.classList.toggle('active',on);
+    if(on)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current');
+  });
+  const update=()=>{
+    if(Date.now()<lock)return;
+    const y=innerHeight*.4;let id=null;
+    secs.forEach(s=>{const r=s.getBoundingClientRect();if(r.top<=y&&r.bottom>y)id=s.id});
+    if(innerHeight+scrollY>=document.documentElement.scrollHeight-4)id='contact';
+    if(id!==cur){cur=id;set(id)}
+  };
+  links.forEach(a=>a.addEventListener('click',()=>{
+    cur=a.getAttribute('href').slice(1);set(cur);
+    lock=Date.now()+900;setTimeout(update,950);
+  }));
+  addEventListener('scroll',update,{passive:true});
+  addEventListener('resize',update);
+  update();
+});
 
 window.__ok=true;
 </script>
