@@ -609,6 +609,21 @@ body.has-cursor #lb-prev,body.has-cursor #lb-next,body.has-cursor #lb-close{curs
 .photo-scan::before{display:none}
 .hero-right{animation:heroFloat 7s ease-in-out infinite}
 @keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@media(max-width:700px){
+.sk-top{flex-wrap:wrap}
+.sk h3{font-size:24px}
+.about-bg{right:16px;top:131px;font-size:clamp(64px,20vw,110px);-webkit-text-stroke:1px rgba(var(--fg),.2)}
+.hero-eyebrow{letter-spacing:3px;padding:8px 14px}
+.jy-row{grid-template-columns:minmax(0,1fr)}
+.jy-row h4{font-size:clamp(30px,10vw,46px);overflow-wrap:anywhere}
+.sk-feature .sk-word{font-size:clamp(44px,15vw,76px)}
+}
+@media(max-width:900px){
+.project-item{padding-bottom:44px}
+.project-item.expanded{position:relative;top:auto;max-height:none;overflow:visible}
+.pi-meta{bottom:auto;top:16px;right:22px}
+.project-item:not(.expanded) .proj-tags li:nth-child(n+4){display:none}
+}
 </style>
 </head>
 <body>
@@ -1105,9 +1120,8 @@ safe(function(){
 
 const projects=[
 {
-  
   featured: true,
- title: 'LYRA - Music Player',
+  title: 'LYRA - Music Player',
   description: 'An offline Flutter music player with a dark UI, built around Cubit-driven state and just_audio playback.',
   facts: [['State','Bloc (Cubit)'],['Audio','just_audio, bundled sample songs'],['Storage','SharedPreferences'],['Navigation','Four destinations'],['Code quality','flutter analyze: no issues at a reported milestone']],
   tags: ['Flutter', 'Dart', 'Bloc (Cubit)', 'just_audio', 'SharedPreferences'],
@@ -1115,7 +1129,6 @@ const projects=[
   live: ''
 },{
   featured: true,
- 
   title: 'Real Chat App',
   description: 'A Flutter-based chat application integrated with Firebase, featuring email and password authentication, user discovery, chat navigation, and profile management.',
   facts: [
@@ -1148,8 +1161,7 @@ const projects=[
     ['Architecture', 'Feature-based Clean Architecture'],
     ['Authentication', 'Firebase Auth with AuthGate and authStateChanges()'],
     ['Cloud Database', 'Cloud Firestore'],
-    ['App Structure', 'Home, Transactions, Reports & Profile'],
-    ['State Management', 'Only include the state management solution actually implemented']
+    ['App Structure', 'Home, Transactions, Reports & Profile']
   ],
   tags: [
     'Flutter',
@@ -1241,8 +1253,7 @@ const projects=[
     'images/quizecomplete.png'
   ],
   live: ''
-},
-
+}
 ];
 
 safe(function(){
@@ -1285,6 +1296,7 @@ safe(function(){
       li._p=!li._p;
       if(!li._p)li._h=false;
       sync();
+      if(li._p&&innerWidth<=900)requestAnimationFrame(()=>li.scrollIntoView({behavior:'smooth',block:'start'}));
     });
     li.addEventListener('keydown',e=>{
       if(e.target!==li||(e.key!=='Enter'&&e.key!==' '))return;
