@@ -1105,36 +1105,144 @@ safe(function(){
 
 const projects=[
 {
+  
   featured: true,
-  title: 'Real Chat App',
-  description: 'A Flutter chat application on a Firebase backend, configured through the FlutterFire CLI.',
-  facts: [['Backend','Firebase'],['Setup','FlutterFire CLI, generated firebase_options.dart'],['Android package','com.mohibullah.real_chat']],
-  tags: ['Flutter', 'Dart', 'Firebase'],
-  github: 'https://github.com/MUfoysal/real-chat',images:['images/chatlog.png','images/chat.png','images/chatcon.png','images/chatprofile.png'],
-  live: ''
-},
-{
-  featured: true,
-  title: 'LYRA - Music Player',
+ title: 'LYRA - Music Player',
   description: 'An offline Flutter music player with a dark UI, built around Cubit-driven state and just_audio playback.',
   facts: [['State','Bloc (Cubit)'],['Audio','just_audio, bundled sample songs'],['Storage','SharedPreferences'],['Navigation','Four destinations'],['Code quality','flutter analyze: no issues at a reported milestone']],
   tags: ['Flutter', 'Dart', 'Bloc (Cubit)', 'just_audio', 'SharedPreferences'],
   github: 'https://github.com/MUfoysal/lyra',images:['images/lyraporthome.png','images/lyrahome.png','images/lyraplayer.png','images/lyrasong.png'],
   live: ''
+},{
+  featured: true,
+ 
+  title: 'Real Chat App',
+  description: 'A Flutter-based chat application integrated with Firebase, featuring email and password authentication, user discovery, chat navigation, and profile management.',
+  facts: [
+    ['Backend', 'Firebase'],
+    ['Authentication', 'Firebase Authentication'],
+    ['Database', 'Cloud Firestore'],
+    ['Configuration', 'FlutterFire CLI'],
+    ['Android Package', 'com.mohibullah.real_chat']
+  ],
+  tags: [
+    'Flutter',
+    'Dart',
+    'Firebase Authentication',
+    'Cloud Firestore'
+  ],
+  github: 'https://github.com/MUfoysal/real-chat',
+  images: [
+    'images/chatlog.png',
+    'images/chat.png',
+    'images/chatcon.png',
+    'images/chatprofile.png'
+  ],
+  live: ''
 },
 {
   featured: true,
   title: 'Expense Tracker',
-  description: 'A Flutter expense tracker where an auth gate decides between the login flow and the main app, structured as a feature-based Clean Architecture.',
-  facts: [['Architecture','Feature-based Clean Architecture'],['Auth flow','AuthGate + authStateChanges() routes to MainNavigationPage or LoginPage'],['Backend','Firebase Authentication, Cloud Firestore'],['Navigation','Home, Transactions, Reports, Profile']],
-  tags: ['Flutter', 'Dart', 'Firebase Authentication', 'Cloud Firestore'],
-  github: 'https://github.com/MUfoysal/expense_tracker',images:['images/expensehome.png','images/expenseTransection.png','images/incomeTransaction.png','images/transaction.png','images/report.png','images/weeklygraph.png','images/spendingBrackdown.png'],
+  description: 'A personal finance management application built with Flutter and Firebase, featuring structured authentication, income and expense tracking, and financial reports using feature-based Clean Architecture.',
+  facts: [
+    ['Architecture', 'Feature-based Clean Architecture'],
+    ['Authentication', 'Firebase Auth with AuthGate and authStateChanges()'],
+    ['Cloud Database', 'Cloud Firestore'],
+    ['App Structure', 'Home, Transactions, Reports & Profile'],
+    ['State Management', 'Only include the state management solution actually implemented']
+  ],
+  tags: [
+    'Flutter',
+    'Dart',
+    'Firebase Authentication',
+    'Cloud Firestore',
+    'Clean Architecture'
+  ],
+  github: 'https://github.com/MUfoysal/expense_tracker',
+  images: [
+    'images/expensehome.png',
+    'images/transaction.png',
+    'images/expenseTransection.png',
+    'images/incomeTransaction.png',
+    'images/report.png',
+    'images/weeklygraph.png',
+    'images/spendingBrackdown.png'
+  ],
   live: ''
 },
-{title:'StudyFlow',description:'A green-themed Flutter project connected to its own Firebase project.',facts:[['UI','Green theme'],['Backend','Firebase project configured']],tags:['Flutter'],github:'https://github.com/MUfoysal/studyflow',images:[],live:''},
-{title:'Weather App',description:'A Flutter weather app that reads current conditions from Open-Meteo through a Clean Architecture layer structure.',facts:[['Data source','Open-Meteo API'],['Architecture','Clean Architecture'],['Sample response (Dhaka)','30.1°C, clear sky, 66% humidity, 5.1 km/h wind']],tags:['Flutter','Dart','Open-Meteo API'],github:'https://github.com/MUfoysal/weather_app',images:['images/weatherhome.png','images/tamp.png','images/tamp2.png'],live:''},
-{title:'Quiz App',description:'A Flutter quiz project connected to its own Firebase project.',facts:[['Backend','Firebase project configured']],tags:['Flutter'],github:'https://github.com/MUfoysal/Quize-App',images:['images/quzehome.png','images/right.png','images/worng.png','images/quizecomplete.png'],live:''},
-{title:'Konoha Notes',description:'A Naruto-themed notes web app where every user\'s notes are private and email verification is required.',facts:[['Data model','users/{uid}/notes/{noteId} in Cloud Firestore'],['Auth','Firebase Authentication, email verification required'],['Tests','16/16 unit tests, 8/8 Firestore rules tests'],['Firebase SDK','12.19.0']],tags:['HTML','CSS','JavaScript','Firebase'],github:'https://github.com/MUfoysal/konoha-nots',images:['images/konohahome.png','images/history.png','images/historyinfo.png','images/myscroll.png','images/writenote.png','images/konohapro.png'],live:''}
+{
+  title: 'Konoha Notes',
+  description: 'A personal notes web app inspired by Naruto, where users can create and manage their own notes with Firebase Authentication and Cloud Firestore.',
+  facts: [
+    ['Backend', 'Firebase Authentication + Cloud Firestore'],
+    ['Data storage', 'Private user-specific notes'],
+    ['Authentication', 'Email verification required'],
+    ['Testing', 'Unit tests + Firestore rules tests'],
+    ['Firebase SDK', '12.19.0']
+  ],
+  tags: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
+  github: 'https://github.com/MUfoysal/konoha-nots',
+  images: [
+    'images/konohahome.png',
+    'images/history.png',
+    'images/historyinfo.png',
+    'images/myscroll.png',
+    'images/writenote.png',
+    'images/konohapro.png'
+  ],
+  live: 'https://mufoysal.github.io/konoha-nots-web/'
+},
+{
+  title: 'Weather App',
+  description: 'A Flutter-based weather application that integrates the Open-Meteo API to display current weather conditions, hourly forecasts, and a 7-day weather outlook, following Clean Architecture principles for maintainability and separation of concerns.',
+  facts: [
+    ['Data Source', 'Open-Meteo API'],
+    ['Architecture', 'Clean Architecture'],
+    ['Current Weather', 'Real-time weather conditions'],
+    ['Hourly Forecast', 'Next 24 hours'],
+    ['Daily Forecast', '7-day weather forecast'],
+    ['Location Search', 'City-based weather search'],
+    ['Error Handling', 'Custom exceptions for invalid locations, network failures, and request timeouts']
+  ],
+  tags: ['Flutter', 'Dart', 'REST API', 'Open-Meteo', 'Clean Architecture'],
+  github: 'https://github.com/MUfoysal/weather_app',
+  images: [
+    'images/weatherhome.png',
+    'images/tamp.png',
+    'images/tamp2.png'
+  ],
+  live: ''
+},
+{
+  title: 'Quiz App',
+  description: 'A Flutter-based quiz application that fetches multiple-choice questions from Firebase Firestore, evaluates answers, tracks scores, and displays the final results.',
+  facts: [
+    ['Framework', 'Flutter'],
+    ['Backend', 'Firebase Cloud Firestore'],
+    ['Quiz Format', 'Multiple-choice questions'],
+    ['Question Management', 'Questions fetched from Firestore'],
+    ['Scoring', 'Automatic score calculation'],
+    ['User Feedback', 'Correct and incorrect answer indicators'],
+    ['Result', 'Score, percentage, and answer summary'],
+    ['Architecture', 'Feature-based Clean Architecture']
+  ],
+  tags: [
+    'Flutter',
+    'Dart',
+    'Firebase',
+    'Cloud Firestore',
+    'Clean Architecture'
+  ],
+  github: 'https://github.com/MUfoysal/Quize-App',
+  images: [
+    'images/quzehome.png',
+    'images/right.png',
+    'images/worng.png',
+    'images/quizecomplete.png'
+  ],
+  live: ''
+},
+
 ];
 
 safe(function(){
