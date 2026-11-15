@@ -20,7 +20,8 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23060606'/%3E%3Ctext x='16' y='23' font-size='18' text-anchor='middle' fill='%23b8ff57' font-family='Impact,sans-serif'%3EMF%3C/text%3E%3C/svg%3E"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Black+Ops+One&family=Plus+Jakarta+Sans:wght@400;500;600&family=Fraunces:ital,wght@1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+<link rel="preload" as="image" href="images/profile.png" fetchpriority="high"/>
+<link href="https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Black+Ops+One&family=Plus+Jakarta+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
 <noscript><style>#preloader{display:none}.reveal{opacity:1;transform:none}.hero-line span,.hero-desc,.hero-actions{transform:none;opacity:1}.hero-photo-wrap{clip-path:none}.hero-photo{transform:none}.ch{transform:none}</style></noscript>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -639,8 +640,8 @@ linear-gradient(var(--accent),var(--accent)) 100% 100%/1.5px 11px no-repeat;tran
 body:has(#cursor-ring.big) #cursor{transform:translate(-50%,-50%) scale(.45)}
 @supports(overflow-x:clip){body{overflow-x:clip}}
 @media(max-width:900px){
-.project-item{transform-origin:50% 0;transform:scale(calc(1 - var(--fold,0)*.05));filter:brightness(calc(1 - var(--fold,0)*.5));transition:background .5s}
-.project-item.expanded{transform:none;filter:none}
+.project-item{transform-origin:50% 0;transform:scale(calc(1 - var(--fold,0)*.05));transition:background .5s}
+.project-item.expanded{transform:none}
 }
 .project-item.lit{background:linear-gradient(135deg,#1b1f13 0%,#0e0e0e 55%,#131710 100%)}
 .project-item.lit::after{opacity:1}
@@ -697,6 +698,10 @@ body:has(#cursor-ring.big) #cursor{transform:translate(-50%,-50%) scale(.45)}
 #cursor-ring.lab::after{opacity:1}
 #cursor-ring.down{scale:.82}
 body:has(#cursor-ring.lab) #cursor{opacity:0}
+@media(max-width:900px){nav.scrolled{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(var(--bgc),.97)}}
+.off,.off *,.off::before,.off::after,.off *::before,.off *::after{animation-play-state:paused!important}
+.link-row:hover .lr-t,.link-row:hover .lr-n,.link-row:hover .lr-a,.link-row:focus-visible .lr-t,.link-row:focus-visible .lr-n,.link-row:focus-visible .lr-a{color:var(--black)}
+.link-row:hover .lr-t small,.link-row:focus-visible .lr-t small{color:rgba(6,6,6,.72)}
 </style>
 </head>
 <body>
@@ -748,7 +753,7 @@ body:has(#cursor-ring.lab) #cursor{opacity:0}
     <div class="hero-actions">
       <a href="#works" class="btn">View Projects →</a>
       <a href="#contact" class="btn-ghost">Contact ↗</a>
-      <a href="Mohib-Ullah-Foysal-CV.pdf" class="btn-ghost" download>Download CV ↓</a>
+      <a href="mohibpdf.pdf" class="btn-ghost" download="Mohib-Ullah-Foysal-CV.pdf">Download CV ↓</a>
     </div>
   </div>
   <div class="hero-right" id="hero-right">
@@ -757,7 +762,7 @@ body:has(#cursor-ring.lab) #cursor{opacity:0}
     <div class="hero-photo-wrap">
       <i class="corner tl" aria-hidden="true"></i><i class="corner tr" aria-hidden="true"></i><i class="corner bl" aria-hidden="true"></i><i class="corner br" aria-hidden="true"></i>
       <i class="photo-border" aria-hidden="true"></i>
-      <img class="hero-photo" src="images/profile.png" alt="Portrait of Mohib Ullah Foysal" width="440" height="640" fetchpriority="high"/>
+      <img class="hero-photo" src="images/profile.png" alt="Portrait of Mohib Ullah Foysal" width="440" height="640" fetchpriority="high" decoding="async"/>
       <span class="img-fallback" aria-hidden="true">MF</span>
       <div class="photo-fade top"></div>
       <div class="photo-fade bottom"></div>
@@ -862,7 +867,7 @@ body:has(#cursor-ring.lab) #cursor{opacity:0}
   <div class="ab-grid reveal">
     <figure class="ab-cell ab-photo-cell">
       <div class="ab-photo-wrap">
-        <img class="ab-photo" src="images/profile_about.png" alt="Mohib Ullah Foysal" width="400" height="500" loading="lazy"/>
+        <img class="ab-photo" src="images/profile_about.png" alt="Mohib Ullah Foysal" width="400" height="500" loading="lazy" decoding="async"/>
         <span class="img-fallback" aria-hidden="true">MF</span>
       </div>
       <figcaption class="ab-cap"><span class="ab-name">Mohib Ullah Foysal</span><span class="ab-role">Flutter Developer</span></figcaption>
@@ -1077,7 +1082,7 @@ safe(function(){
   if(reduceMotion){fonts.then(finish);return}
   let c=0;
   const t=setInterval(()=>{
-    c=Math.min(c+Math.ceil(Math.random()*4),100);
+    c=Math.min(c+Math.ceil(Math.random()*8),100);
     num.textContent=String(c).padStart(3,'0');bar.style.width=c+'%';
     if(c>=100){clearInterval(t);fonts.then(()=>setTimeout(finish,250))}
   },12);
@@ -1150,7 +1155,7 @@ safe(function(){
       if(s.life<=0||s.x>W+50||s.y>H+50){shoot=null;nextShoot=t+4+Math.random()*6}
     }
   }
-  function loop(now){if(!visible){raf=null;return}draw(now/1000);raf=requestAnimationFrame(loop)}
+  let lastT=0;function loop(now){if(!visible){raf=null;return}raf=requestAnimationFrame(loop);if(isSmall()&&now-lastT<32)return;lastT=now;draw(now/1000)}
   let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(resize,150)});
   resize();
   if(reduceMotion)return;
@@ -1562,7 +1567,7 @@ safe(function(){
     return proj([(f*home[0]+g*b[0])*a,(f*home[1]+g*b[1])*a,(f*home[2]+g*b[2])*a]);
   };
   function size(){
-    const d=Math.min(devicePixelRatio||1,2);W=cv.clientWidth;H=cv.clientHeight;sm=W<480;
+    const d=Math.min(devicePixelRatio||1,innerWidth<700?1.5:2);W=cv.clientWidth;H=cv.clientHeight;sm=W<480;
     cv.width=W*d;cv.height=H*d;ctx.setTransform(d,0,0,d,0,0);R=Math.min(W,H)*(sm?.33:.36);cx=W/2;cy=H/2;
     if(reduceMotion)draw(0);
   }
@@ -1685,7 +1690,7 @@ safe(function(){
     put('SUN '+sunLat.toFixed(1)+'°  '+sunLon.toFixed(1)+'°',10,40,'left','rgba(240,236,228,.55)',sm?10:9,100);
     put('NODES '+String(dests.length).padStart(2,'0'),W-10,16,'right','rgba(240,236,228,.55)',sm?10:9,100);put('LINK ACTIVE',W-10,28,'right','rgba(240,236,228,.55)',sm?10:9,100);put('UTC '+now.toISOString().slice(11,19),W-10,40,'right','rgba(240,236,228,.55)',sm?10:9,100);flush();
   }
-  function loop(now){if(!visible){raf=null;return}draw(now/1000);raf=requestAnimationFrame(loop)}
+  let lastT=0;function loop(now){if(!visible){raf=null;return}raf=requestAnimationFrame(loop);if(isSmall()&&now-lastT<32)return;lastT=now;draw(now/1000)}
   let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(size,150)});
   size();
   if(reduceMotion)return;
@@ -1784,39 +1789,61 @@ safe(function(){
 
 safe(function(){
   const lists=[$('#project-list'),$('#more-list')];
-  let busy=false;
+  const rows=$$('.jy-row');
+  const jyList=$('.jy-list');
+  const mq=matchMedia('(max-width:900px)');
+  const tops=new Map();
+  let busy=false,groups=[];
+  const inView=el=>{const r=el.getBoundingClientRect();return r.bottom>0&&r.top<innerHeight};
+  const build=()=>{
+    const q=['.sk','.ab-cell','.link-row'];
+    const zones=['.bento','.ab-grid','.link-list'];
+    if(mq.matches){q.push('.hero-photo-wrap');zones.push('#hero-right')}
+    groups=q.map((sel,i)=>({els:$$(sel),zone:$(zones[i])}));
+    tops.clear();
+    lists.forEach(l=>[...l.children].forEach(it=>tops.set(it,parseFloat(getComputedStyle(it).top)||0)));
+  };
+  const nearest=(els,lo,hi)=>{
+    let best=null,bd=1e9;
+    for(const el of els){
+      const b=el.getBoundingClientRect();
+      if(b.bottom<innerHeight*lo||b.top>innerHeight*hi)continue;
+      const d=Math.abs((b.top+b.bottom)/2-innerHeight*.5);
+      if(d<bd){bd=d;best=el}
+    }
+    return best;
+  };
   const run=()=>{
     busy=false;
-    const rows=$$('.jy-row');
-    const groups=['.sk','.ab-cell','.link-row'].concat(innerWidth<=900?['.hero-photo-wrap']:[]).map(q=>$$(q));
+    const small=mq.matches;
+    let pick=null;
     lists.forEach(l=>{
-      if(l.hidden)return;
+      if(l.hidden||!inView(l))return;
       const items=[...l.children];
       items.forEach((it,i)=>{
+        const r=it.getBoundingClientRect();
+        if(r.top<=innerHeight*.6&&r.bottom>innerHeight*.25)pick=it;
+        if(!small)return;
         const nx=items[i+1];
         if(!nx||it.classList.contains('expanded')){it.style.setProperty('--fold','0');return}
-        const top=parseFloat(getComputedStyle(it).top)||0;
-        const gap=nx.getBoundingClientRect().top-(top+10);
-        const p=Math.max(0,Math.min(1,1-gap/it.offsetHeight));
+        const gap=nx.getBoundingClientRect().top-((tops.get(it)||0)+10);
+        const p=Math.max(0,Math.min(1,1-gap/r.height));
         it.style.setProperty('--fold',p.toFixed(3));
       });
     });
-    const all=lists.flatMap(l=>l.hidden?[]:[...l.children]);
-    let pick=null;
-    all.forEach(it=>{const r=it.getBoundingClientRect();if(r.top<=innerHeight*.6&&r.bottom>innerHeight*.25)pick=it});
-    all.forEach(it=>it.classList.toggle('lit',it===pick));
-    let best=null,bd=1e9;
-    rows.forEach(r=>{const b=r.getBoundingClientRect();if(b.bottom<0||b.top>innerHeight)return;const d=Math.abs((b.top+b.bottom)/2-innerHeight*.5);if(d<bd){bd=d;best=r}});
-    rows.forEach(r=>r.classList.toggle('lit',r===best));
+    lists.forEach(l=>{if(!l.hidden&&inView(l))[...l.children].forEach(it=>it.classList.toggle('lit',it===pick))});
+    if(jyList&&inView(jyList)){const best=nearest(rows,0,1);rows.forEach(r=>r.classList.toggle('lit',r===best))}
     groups.forEach(g=>{
-      let gb=null,gd=1e9;
-      g.forEach(el=>{const b=el.getBoundingClientRect();if(b.bottom<innerHeight*.25||b.top>innerHeight*.75)return;const d=Math.abs((b.top+b.bottom)/2-innerHeight*.5);if(d<gd){gd=d;gb=el}});
-      g.forEach(el=>el.classList.toggle('lit',el===gb));
+      if(!g.zone||!inView(g.zone))return;
+      const gb=nearest(g.els,.25,.75);
+      g.els.forEach(el=>el.classList.toggle('lit',el===gb));
     });
   };
   const req=()=>{if(!busy){busy=true;requestAnimationFrame(run)}};
+  const rebuild=()=>{build();req()};
   addEventListener('scroll',req,{passive:true});
-  addEventListener('resize',req);
+  addEventListener('resize',rebuild);
+  build();
   run();
 });
 
@@ -1830,6 +1857,12 @@ safe(function(){
     ring.dataset.label=l;
     ring.classList.toggle('lab',!!l);
   });
+});
+
+safe(function(){
+  if(!('IntersectionObserver' in window))return;
+  const io=new IntersectionObserver(es=>es.forEach(e=>e.target.classList.toggle('off',!e.isIntersecting)),{rootMargin:'120px'});
+  ['#hero','.ticker','#experience','#contact','.sk-feature'].forEach(q=>{const el=$(q);if(el)io.observe(el)});
 });
 
 window.__ok=true;
